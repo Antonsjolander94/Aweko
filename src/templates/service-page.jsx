@@ -113,7 +113,7 @@ const ServicePageTemplate = ({ data, location }) => {
   } = data;
   return (
     <Layout>
-      <SEO title={rubrik} description={text} pathname={location} />
+      <SEO title={rubrik} description={text.join()} pathname={location} />
       <div className="margin-nav">
         <Hero>
           <div className="container">
