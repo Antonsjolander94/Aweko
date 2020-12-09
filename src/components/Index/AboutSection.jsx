@@ -51,7 +51,11 @@ const AboutSection = ({ title, text, link, linkText, image }) => {
           </SectionTextContent>
           <SectionImageContent>
             <ShapeBehindImage />
-            <StyledImage style={{ position: "absolute" }} fluid={image.fluid} />
+            <StyledImage
+              alt={image.title}
+              style={{ position: "absolute" }}
+              fluid={image.fluid}
+            />
           </SectionImageContent>
         </SectionContent>
       </div>

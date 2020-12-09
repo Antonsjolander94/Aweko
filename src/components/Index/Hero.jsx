@@ -88,6 +88,7 @@ function Hero({ title, text, words, image }) {
             <ShapeBehindImage />
             <StyledImage
               style={{ position: "absolute", right: "0" }}
+              alt={image.title}
               fluid={image.fluid}
             />
           </ImageContent>

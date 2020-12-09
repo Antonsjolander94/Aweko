@@ -8,12 +8,14 @@ const UseHomepage = () => {
           contentful_id: { eq: "5aNAeGqiLdgL6Vxt6KSyZ4" }
         ) {
           heroBild {
-            fluid(quality: 100) {
+            title
+            fluid(maxWidth: 1159) {
               ...GatsbyContentfulFluid_withWebp
             }
           }
           omOssBild {
-            fluid(quality: 100) {
+            title
+            fluid(maxWidth: 1129) {
               ...GatsbyContentfulFluid_withWebp
             }
           }

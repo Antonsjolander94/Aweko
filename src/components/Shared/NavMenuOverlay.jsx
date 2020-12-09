@@ -3,9 +3,11 @@ import tw, { styled, css } from "twin.macro";
 import { Link } from "gatsby";
 
 const NavMenuOverlayWrapper = styled.div(({ open }) => [
-  tw`fixed h-screen bg-opacity-50 md:hidden flex justify-center items-center inset-0  z-20 transform  translate-x-full bg-pink-400`,
+  tw`fixed h-screen  md:hidden flex justify-center items-center inset-0  z-20 transform  translate-x-full `,
   open && tw` translate-x-0`,
   css`
+    background: rgba(255, 216, 225, 0.95);
+
     transition: transform 0.3s ease-in-out;
     will-change: transform;
   `,
@@ -23,7 +25,8 @@ const NavLink = styled(Link)(() => [
   tw`hocus:(scale-105 text-white)`,
   css`
     &.active {
-      color: white;
+      color: black;
+      text-decoration: underline;
     }
   `,
 ]);

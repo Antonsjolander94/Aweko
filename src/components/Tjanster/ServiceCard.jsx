@@ -14,7 +14,7 @@ const ServiceCardWrapper = styled(Link)`
 `;
 
 const TextWrapper = styled.div`
-  ${tw`flex justify-between items-center h-16 p-6`}
+  ${tw`flex lg:justify-start justify-center items-center lg:p-6 lg:px-6 px-6 py-6`}
 `;
 
 const ServiceCard = ({ ...props }) => {
@@ -23,7 +23,7 @@ const ServiceCard = ({ ...props }) => {
     <ServiceCardWrapper to={`/tjanster/${item.slug}`}>
       <Img style={{ height: "100%", width: "100%" }} fluid={item.bild.fluid} />
       <TextWrapper>
-        <h3 className="lg:text-2xl font-light text-2xl">{item.rubrik}</h3>
+        <h3 className="lg:text-2xl font-light text-3xl">{item.rubrik}</h3>
       </TextWrapper>
     </ServiceCardWrapper>
   );

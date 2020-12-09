@@ -43,8 +43,30 @@ module.exports = {
     "@contentful/gatsby-transformer-contentful-richtext",
     "gatsby-transformer-sharp",
     `gatsby-plugin-sharp`,
-    "gatsby-plugin-remove-serviceworker",
     `gatsby-plugin-react-leaflet`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: "G-K19E5YBH43", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+          allowAdFeatures: false, // default
+        },
+        googleTagManager: {
+          trackingId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-tagmanager", // default
+          dataLayerName: "dataLayer", // default
+        },
+        facebookPixel: {
+          pixelId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-facebook-pixel", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -66,6 +88,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        name: "Aweko Nord AB",
+        short_name: "Aweko",
+        start_url: "/",
+        background_color: "#FFD8E1",
+        theme_color: "#FFD8E1",
         icon: "src/images/aweko-favicon.png",
         defaultImage: "src/images/aweko-img.png",
       },

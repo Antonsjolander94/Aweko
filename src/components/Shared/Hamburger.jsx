@@ -21,7 +21,7 @@ const StyledBurger = styled.button(() => [
     }
     &:hover {
       div {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 1);
       }
     }
     div {
