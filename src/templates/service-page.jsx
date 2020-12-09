@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import tw, { styled } from "twin.macro";
 import {
   HeadingOneVariant,
@@ -8,6 +8,7 @@ import {
 } from "../components/Shared/Types";
 import Img from "gatsby-image";
 import ServicesVariant from "../components/Index/ServicesVariant";
+import SEO from "../components/seo";
 
 const Hero = styled.header`
   ${tw`lg:py-20 py-10 border-b`}
@@ -112,6 +113,7 @@ const ServicePageTemplate = ({ data, location }) => {
   } = data;
   return (
     <Layout>
+      <SEO title={rubrik} description={text} pathname={location} />
       <div className="margin-nav">
         <Hero>
           <div className="container">
