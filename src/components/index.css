@@ -1,0 +1,32 @@
+body {
+  background: #f9f6f3;
+  background: #f6f5ef;
+  background: #f6f5ef;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+.slick-slide .c {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.margin-nav {
+  margin-top: 95px;
+}
+
+@media (max-width: 1023px) {
+  .margin-nav {
+    margin-top: 65px;
+  }
+}
+.path path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
