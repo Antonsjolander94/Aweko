@@ -22,9 +22,9 @@ export const Container = styled.header`
 
 export const CustomersWrapper = styled.section`
   .slick-slide {
-    ${tw`px-12 `}
+    ${tw`px-10`}
     @media (max-width: 1325px) {
-      padding: 0.25rem 6rem;
+      padding: 0.25rem 5rem;
     }
     @media (max-width: 1024px) {
       padding: 0.25rem 4rem;
