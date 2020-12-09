@@ -8,6 +8,7 @@ const Burger = ({ open, setOpen }) => {
       <div css={[open && firstLine]} />
       <div css={[open && secondLine]} />
       <div css={[open && thirdLine]} />
+      <p className="sr-only">Meny</p>
     </StyledBurger>
   );
 };

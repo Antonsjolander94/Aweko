@@ -30,6 +30,11 @@ function Layout({ children }) {
         kakor (cookies).
       </CookieConsent>
       <Helmet>
+        <html lang="sv" />
+        <meta
+          name="google-site-verification"
+          content="4ixLOA-jHAGroaibpWCvDwQOIN-jTq4W4xqQfikWXXo"
+        />
         <body
           className={`${menuOpen ? "overflow-hidden h-full max-h-full" : ""} `}
         />

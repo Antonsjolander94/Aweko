@@ -32,6 +32,7 @@ function Navbar({ openMenu }) {
         <div className="flex justify-between items-center">
           <Link to="/">
             <LogoWrappper />
+            <p className="sr-only">Aweko Logotyp</p>
           </Link>
           <nav>
             <div>
