@@ -31,11 +31,12 @@ module.exports = {
     titleTemplate: "%s · Din redovisningsbyrå i Umeå",
     description:
       "Vi är en fulländad byrå i Umeå som hjälper dig med löpande bokföring, bokslut, årsredovisning, lön, deklarationer samt rådgivning. Hos oss får ni personlig service och skräddarsydda lösningar som passar just dig och ditt företag. Ibland kanske inte tiden räcker till för att båda förverkliga en affärsidé och samtidigt ha kontroll över företagets ekonomi. Vi har som mål att vara den personliga redovisningsbyrån som riktar sig till dig som entreprenör i både stora, medelstora och små företag. Låt oss därför hjälpa dig och underlätta din vardag. Vi sköter din administration så att du själv som företagare kan fokusera på det som du är bäst på – ditt företags kärnverksamhet.",
-    url: "http://aweko.se/", // No trailing slash allowed!
+    url: "https://www.aweko.se/", // No trailing slash allowed!
     image: "/images/aweko-img.png", // Path to your image you placed in the 'static' folder
   },
   pathPrefix: "/aweko-hemsida",
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
