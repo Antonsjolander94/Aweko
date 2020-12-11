@@ -135,14 +135,16 @@ const OmOss = ({ location }) => {
               <ContactWrapper>
                 <form
                   className="flex flex-col lg:w-8/12 w-full"
-                  action="https://getform.io/f/a1388a6e-c07d-4c5e-8493-f9b620909312"
+                  name="Contact Form"
                   method="POST"
+                  data-netlify="true"
+                  action="/tack"
                 >
-                  <Label htmlFor="name">Namn</Label>
+                  <Label htmlFor="form-name">Namn</Label>
                   <Input
                     required
                     type="text"
-                    name="name"
+                    name="form-name"
                     value={name}
                     placeholder="Ditt namn"
                     onChange={(e) => setName(e.target.value)}

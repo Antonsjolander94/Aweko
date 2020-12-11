@@ -9,6 +9,7 @@
     "@emotion/core": "10.1.1",
     "@emotion/styled": "10.0.27",
     "@emotion/styled-base": "10.0.31",
+    "add": "^2.0.6",
     "gatsby": "^2.24.85",
     "gatsby-background-image": "^1.3.1",
     "gatsby-image": "^2.6.0",
@@ -16,6 +17,7 @@
     "gatsby-plugin-gdpr-cookies": "^1.0.11",
     "gatsby-plugin-manifest": "^2.8.0",
     "gatsby-plugin-offline": "^3.6.0",
+    "gatsby-plugin-open-graph-images": "^0.1.6",
     "gatsby-plugin-postcss": "^3.1.0",
     "gatsby-plugin-preact": "^4.3.0",
     "gatsby-plugin-purgecss": "^5.0.0",
@@ -42,7 +44,8 @@
     "react-text-loop": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^1.9.6",
-    "twin.macro": "^1.12.1"
+    "twin.macro": "^1.12.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "babel-plugin-transform-remove-console": "^6.9.4",

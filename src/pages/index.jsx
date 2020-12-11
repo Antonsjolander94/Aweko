@@ -24,9 +24,7 @@ const index = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO
-        title={
-          "Aweko Nord - Redovisning, bokföring, bokslut, årsredovisning, lön, deklarationer, rådgivning, ekonomikonsult i Umeå"
-        }
+        title={"Aweko - Din redovisningsbyrå i Umeå"}
         description={
           "Aweko Nord AB - Anna Westlund - Redovisning - bokföring, bokslut, årsredovisning, lön, deklarationer, rådgivning, Ekonomikonsult - Katja Toral Sjölander - Umeå - Löner - Tjänster - Älven - Företagsparken - Ume - "
         }
