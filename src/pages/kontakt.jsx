@@ -102,7 +102,6 @@ const SubmitButton = styled.button`
 
 const OmOss = ({ location }) => {
   const data = useContactPage();
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
 
@@ -140,15 +139,7 @@ const OmOss = ({ location }) => {
                   data-netlify="true"
                   action="/tack"
                 >
-                  <Label htmlFor="form-name">Namn</Label>
-                  <Input
-                    required
-                    type="text"
-                    name="form-name"
-                    value={name}
-                    placeholder="Ditt namn"
-                    onChange={(e) => setName(e.target.value)}
-                  />
+                  <Input type="hidden" name="form-name" value="Contact Form" />
                   <Label htmlFor="email">Email</Label>
                   <Input
                     required
@@ -157,18 +148,18 @@ const OmOss = ({ location }) => {
                     placeholder="Din email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <Label htmlFor="meddelande">Meddelande</Label>
+                  <Label htmlFor="message">Meddelande</Label>
                   <TextArea
                     required
                     rows="4"
                     cols="50"
                     type="text"
-                    name="meddelande"
+                    name="message"
                     placeholder="Skriv ett meddelande"
                     onChange={(e) => setText(e.target.value)}
                   />
                   <SubmitButton
-                    disabled={name === "" || email === "" || text === ""}
+                    disabled={email === "" || text === ""}
                     type="submit"
                   >
                     Skicka meddelande
