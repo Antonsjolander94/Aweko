@@ -15,7 +15,7 @@ const Tack = () => (
         <div className="flex justify-center items-center">
           <div className="text-center">
             <HeadingOneVariant center>Tack för ditt mejl</HeadingOneVariant>
-            <HeroText center>Vi återkommer så snart som möjligt.</HeroText>
+            <HeroText center>Vi återkommer så snart som möjligt</HeroText>
           </div>
         </div>
       </div>
