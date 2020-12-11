@@ -45,7 +45,7 @@ const index = ({ location }) => {
         text={omOssText}
         image={omOssBild}
         link={"/om-oss"}
-        linkText={"Läs mer"}
+        linkText={"Om oss"}
       />
     </Layout>
   );

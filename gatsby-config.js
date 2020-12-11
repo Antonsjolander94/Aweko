@@ -45,7 +45,6 @@ module.exports = {
     "@contentful/gatsby-transformer-contentful-richtext",
     "gatsby-transformer-sharp",
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-leaflet`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-gdpr-cookies`,

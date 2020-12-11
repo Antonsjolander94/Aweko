@@ -5,6 +5,7 @@ import NavMenuOverlay from "./Shared/NavMenuOverlay";
 import Helmet from "react-helmet";
 import "./index.css";
 import CookieConsent from "react-cookie-consent";
+import LinkImage from "../images/aweko-img.png";
 
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +30,26 @@ function Layout({ children }) {
         Genom att fortsätta använda webbplatsen godkänner du att vi använder
         kakor (cookies).
       </CookieConsent>
-      <Helmet>
+      <Helmet
+        meta={[
+          {
+            property: `og:title`,
+            content:
+              "I am a title Open Graph protocol will pick up and display",
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            property: `og:image`,
+            // You should ideally replace the hardcoded URL below with a value you set
+            // in your gatsby-config.js file.  And import all shared site metadata into
+            // this component with the useStaticQuery hook.
+            content: `https://www.aweko.se/${LinkImage}`,
+          },
+        ]}
+      >
         <html lang="sv" />
         <meta
           name="google-site-verification"
