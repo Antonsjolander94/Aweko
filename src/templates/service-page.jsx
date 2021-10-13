@@ -104,9 +104,10 @@ const SubmitButton = styled.button`
 `;
 
 const ServicePageTemplate = ({ data, location }) => {
-  console.log({ servicePage: data });
   const [email, setEmail] = useState("");
   const [textArea, setText] = useState("");
+  const [checkedGDRP, setCheckedGDRP] = useState(false);
+
   const {
     contentfulTjanst: { rubrik, bild, text, slug },
   } = data;
@@ -161,8 +162,27 @@ const ServicePageTemplate = ({ data, location }) => {
                   placeholder="Skriv ett meddelande"
                   onChange={(e) => setText(e.target.value)}
                 />
+                <div>
+                  <label className="inline-flex items-start ">
+                    <input
+                      checked={checkedGDRP}
+                      onChange={(e) => setCheckedGDRP(e.target.checked)}
+                      type="checkbox"
+                      className="gdpr-checkbox cursor-pointer form-checkbox bg-transparent text-pink-500  rounded-none border-black h-6 w-6"
+                      name="gdpr"
+                    />
+                    <span class="ml-3 select-none">
+                      Genom att skicka iväg min fråga samtycker jag till att de
+                      personuppgifter jag angett, liksom eventuella
+                      personuppgifter som härrör från min fråga, används av
+                      Aweko Nord AB i syfte att behandla min fråga och
+                      eventuella följdfrågor.{" "}
+                      <span className="required">*</span>
+                    </span>
+                  </label>
+                </div>
                 <SubmitButton
-                  disabled={email === "" || textArea === ""}
+                  disabled={email === "" || textArea === "" || !checkedGDRP}
                   type="submit"
                 >
                   Skicka meddelande

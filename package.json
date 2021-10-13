@@ -48,6 +48,7 @@
     "yarn": "^1.22.10"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "contentful-import": "^7.9.14",
     "dotenv": "^8.2.0",

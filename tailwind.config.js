@@ -5,6 +5,16 @@ module.exports = {
   },
   purge: [],
   theme: {
+    customForms: (theme) => ({
+      default: {
+        input: {
+          "&:focus": {
+            boxShadow: undefined,
+            borderColor: undefined,
+          },
+        },
+      },
+    }),
     fontFamily: {
       sans: ["soleil", "system-ui"],
       serif: ["Work Sans"],
@@ -48,6 +58,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
+    require("@tailwindcss/custom-forms"),
     ({ addComponents }) => {
       addComponents({
         ".container": {

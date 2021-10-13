@@ -104,6 +104,7 @@ const OmOss = ({ location }) => {
   const data = useContactPage();
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
+  const [checkedGDRP, setCheckedGDRP] = useState(false);
 
   return (
     <Layout location={location}>
@@ -158,8 +159,27 @@ const OmOss = ({ location }) => {
                     placeholder="Skriv ett meddelande"
                     onChange={(e) => setText(e.target.value)}
                   />
+                  <div>
+                    <label className="inline-flex items-start ">
+                      <input
+                        checked={checkedGDRP}
+                        onChange={(e) => setCheckedGDRP(e.target.checked)}
+                        type="checkbox"
+                        className="gdpr-checkbox cursor-pointer form-checkbox bg-transparent text-pink-500  rounded-none border-black h-6 w-6"
+                        name="gdpr"
+                      />
+                      <span class="ml-3 select-none">
+                        Genom att skicka iväg min fråga samtycker jag till att
+                        de personuppgifter jag angett, liksom eventuella
+                        personuppgifter som härrör från min fråga, används av
+                        Aweko Nord AB i syfte att behandla min fråga och
+                        eventuella följdfrågor.{" "}
+                        <span className="required">*</span>
+                      </span>
+                    </label>
+                  </div>
                   <SubmitButton
-                    disabled={email === "" || text === ""}
+                    disabled={email === "" || text === "" || !checkedGDRP}
                     type="submit"
                   >
                     Skicka meddelande
