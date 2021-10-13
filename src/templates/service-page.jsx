@@ -144,7 +144,9 @@ const ServicePageTemplate = ({ data, location }) => {
                 action="/tack"
               >
                 <Input type="hidden" name="form-name" value="Contact Form" />
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">
+                  Email <span className="required">*</span>
+                </Label>
                 <Input
                   required
                   type="email"
@@ -152,7 +154,9 @@ const ServicePageTemplate = ({ data, location }) => {
                   placeholder="Din email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <Label htmlFor="message">Meddelande</Label>
+                <Label htmlFor="message">
+                  Meddelande <span className="required">*</span>
+                </Label>
                 <TextArea
                   required
                   rows="4"
