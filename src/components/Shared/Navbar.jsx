@@ -48,6 +48,11 @@ function Navbar({ openMenu }) {
                   </NavLink>
                 </NavListItem>
                 <NavListItem className="mr-5">
+                  <NavLinkExternal target="_blank" href="https://portal.aweko.se/">
+                    Aweko online
+                  </NavLinkExternal>
+                </NavListItem>
+                <NavListItem className="mr-5">
                   <NavLink activeClassName="active" to="/om-oss">
                     Om oss
                   </NavLink>
@@ -107,10 +112,10 @@ const NavbarWrapper = styled.header(({ open, scrolling }) => [
     `,
 ]);
 const NavList = styled.ul`
-  ${tw`flex md:flex hidden`}
+  ${tw`flex xl:flex hidden `}
 `;
 const NavListMobile = styled.ul`
-  ${tw`flex py-5 md:hidden flex`}
+  ${tw`flex py-5 xl:hidden flex`}
 `;
 const NavListMobileItem = styled.li`
   ${tw`items-center flex `}
@@ -119,6 +124,22 @@ const NavListItem = styled.li`
   ${tw`items-center flex`}
 `;
 const NavLink = styled(Link)(() => [
+  tw`px-8 py-8 md:text-xl text-lg font-light transition-all duration-300 hocus:border-pink-400 hocus:(text-pink-400)`,
+  css`
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    margin-top: -2px;
+
+    &.active {
+      border-bottom: 2px solid;
+      ${tw`border-black text-black`}
+    }
+  `,
+]);
+const NavLinkExternal = styled.a(() => [
   tw`px-8 py-8 md:text-xl text-lg font-light transition-all duration-300 hocus:border-pink-400 hocus:(text-pink-400)`,
   css`
     display: block;
