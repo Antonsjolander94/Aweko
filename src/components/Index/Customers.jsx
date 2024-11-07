@@ -57,9 +57,12 @@ const Customers = () => {
                 rel="noreferrer"
                 key={node.id}
               >
-                <ImageWrapper>
+
+                {node?.rubrik && node?.logotyp?.fluid?.src && (
+                 <ImageWrapper>
                   <img alt={node.rubrik} src={node.logotyp.fluid.src} />
-                </ImageWrapper>
+                </ImageWrapper> 
+                )}
               </a>
             ))}
           </Slider>
