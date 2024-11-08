@@ -83,21 +83,35 @@ const OmOss = ({ location }) => {
                 edges.length &&
                 edges.map(({ node }) => (
                   <PersonCard key={node.contentful_id}>
-                    <PersonCardImageWrapper>
-                      <PersonCardImage
-                        alt={node.namn}
-                        fixed={node.bild.fixed}
-                      />
-                    </PersonCardImageWrapper>
+                    {node?.namn && node?.bild?.fixed && (
+                      <PersonCardImageWrapper>
+                        <PersonCardImage
+                          alt={node.namn}
+                          fixed={node.bild.fixed}
+                        />
+                      </PersonCardImageWrapper>
+                    )}
                     <div className="flex flex-col justify-center text-center">
-                      <PersonName>{node.namn}</PersonName>
-                      <PersonPosition>{node.titel}</PersonPosition>
-                      <PersonEmail href={`mailto:${node.mejladress}`}>
-                        {node.mejladress}
-                      </PersonEmail>
-                      <PersonNumber href={`tel:${node.telefonnummer}`}>
-                        {node.telefonnummer}
-                      </PersonNumber>
+                      {node?.namn && <PersonName>{node.namn}</PersonName>}
+
+                      {node?.titel && (
+                        <PersonPosition>{node.titel}</PersonPosition>
+                      )}
+
+                      {node?.mejladress && (
+                           <PersonEmail href={`mailto:${node.mejladress}`}>
+                           {node.mejladress}
+                         </PersonEmail>
+                      )}
+
+                      {node?.telefonnummer && (
+                         <PersonNumber href={`tel:${node.telefonnummer}`}>
+                         {node.telefonnummer}
+                       </PersonNumber>
+                      )}
+
+                   
+                     
                     </div>
                   </PersonCard>
                 ))}
